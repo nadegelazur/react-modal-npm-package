@@ -1,22 +1,2 @@
-import react from "react";
+export * from './components/Modal/Modal.jsx';
 
-import { useState } from 'react'
-
-const Modal = (props) => {
-
-    const [modal, setModal] = useState(true)
-  return (
-    <div className={`modal__wrapper${props.isOpen ? ' open' : ' close'}`}
-         style={{...props.style}} >
-        <div className='modal__dialog'>
-            <div className='modal__close' onClick={props.isClose}>✕</div>
-            <h2>{props.title}</h2>
-            {props.children}
-
-        </div>
-        
-    </div>
-  )
-}
-
-export default Modal
